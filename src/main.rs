@@ -1,19 +1,14 @@
 use std::fs;
 use tree_sitter::{Language, Parser};
 
-// Load the `tree-sitter-rust` language from the crate.
-extern "C" {
-    fn tree_sitter_rust() -> Language;
-}
-
 fn main() {
     // Create a new parser instance
     let mut parser = Parser::new();
 
     // Set the parser to use the Rust language grammar
-    let language = unsafe { tree_sitter_rust() };
+    let language = tree_sitter_rust::LANGUAGE;
     parser
-        .set_language(language)
+        .set_language(&language.into())
         .expect("Error loading Rust grammar");
 
     // Read a Rust source file (or crate's file)
