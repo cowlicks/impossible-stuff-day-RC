@@ -10,7 +10,7 @@ lsp-types = "0.93.0"
 quote = "1.0.37"
 ra_ap_hir = "0.0.238"
 serde_json = "1.0.128"
-syn = { version = "2.0.79", features = ["full"] }
+syn = { version = "2.0.79", features = ["full", "extra-traits"] }
 tree-sitter = "0.24.2"
 tree-sitter-rust = "0.23.0"
 
@@ -26,3 +26,7 @@ path = "src/ra-client-server.rs"
 [[bin]]
 name = "hirra"
 path = "src/ra-hir.rs"
+
+[[bin]]
+name = "syn"
+path = "src/syn.rs"
