@@ -1,3 +1,4 @@
+#![allow(unused)]
 use lsp_server::{Connection, Message, Request, RequestId};
 use lsp_types::{
     request::GotoDefinition, GotoDefinitionParams, InitializeParams, Position,

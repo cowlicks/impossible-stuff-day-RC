@@ -1,7 +1,7 @@
 //! Parse source using tree-sitter
 //! cargo run src/main.rs
 use std::fs;
-use tree_sitter::{Language, Parser};
+use tree_sitter::Parser;
 
 fn did_stuff() {
     println!("yolo");
