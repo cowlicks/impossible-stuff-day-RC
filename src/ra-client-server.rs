@@ -28,7 +28,7 @@ fn main() {
 
     // Now you can interact with rust-analyzer via LSP methods, for example:
     let text_document = TextDocumentIdentifier {
-        uri: Url::from_file_path("src/lsp-bin.rs").unwrap(),
+        uri: Url::from_file_path("src/ra-client-server.rs").unwrap(),
     };
 
     dbg!();

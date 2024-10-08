@@ -16,5 +16,5 @@ name = "tsitter"
 path = "src/tree-sitter-bin.rs"
 
 [[bin]]
-name = "lsp"
-path = "src/lsp-bin.rs"
+name = "racs"
+path = "src/ra-client-server.rs"
