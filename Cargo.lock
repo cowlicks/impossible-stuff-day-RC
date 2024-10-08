@@ -125,6 +125,7 @@ dependencies = [
  "ignore",
  "lsp-server",
  "lsp-types",
+ "serde_json",
  "tree-sitter",
  "tree-sitter-rust",
 ]
