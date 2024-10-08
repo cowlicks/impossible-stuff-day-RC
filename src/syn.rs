@@ -3,7 +3,7 @@ use syn::{File, Item, ItemFn};
 
 fn main() {
     // Load the Rust source file (you can change the path)
-    let file_content = fs::read_to_string("src/main.rs").expect("Failed to read Rust source file");
+    let file_content = fs::read_to_string(file!()).expect("Failed to read Rust source file");
 
     // Parse the file into an AST
     let syntax_tree: File = syn::parse_file(&file_content).expect("Failed to parse file");
@@ -14,6 +14,7 @@ fn main() {
 
 fn visit_items(file: &File) {
     for item in &file.items {
+        dbg!(&item);
         match item {
             // Look for function definitions
             Item::Fn(func) => handle_function(func),
@@ -38,10 +39,8 @@ fn handle_function(func: &ItemFn) {
 fn handle_expr(expr: &syn::Expr) {
     // Look for function calls inside the function body
     if let syn::Expr::Call(call) = expr {
-        dbg!(&call);
         if let syn::Expr::Path(path) = &*call.func {
-            //println!("Function call: {:?}", path);
-            dbg!();
+            println!("Function call: {:?}", path);
         }
     }
 }
