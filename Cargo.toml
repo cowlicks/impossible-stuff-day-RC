@@ -4,5 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+ignore = "0.4.23"
+lsp-server = "0.7.0"
+lsp-types = "0.93.0"
 tree-sitter = "0.24.2"
 tree-sitter-rust = "0.23.0"
+
+[[bin]]
+name = "tsitter"
+path = "src/tree-sitter-bin.rs"
+
+[[bin]]
+name = "lsp"
+path = "src/lsp-bin.rs"
