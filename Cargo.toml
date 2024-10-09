@@ -8,8 +8,8 @@ ignore = "0.4.23"
 lsp-server = "0.7.0"
 lsp-types = "0.93.0"
 quote = "1.0.37"
-ra_ap_hir = "0.0.238"
 serde_json = "1.0.128"
+streaming-iterator = "0.1.9"
 syn = { version = "2.0.79", features = ["full", "extra-traits"] }
 tree-sitter = "0.24.2"
 tree-sitter-rust = "0.23.0"
@@ -18,14 +18,6 @@ tree-sitter-rust = "0.23.0"
 [[bin]]
 name = "tsitter"
 path = "src/tree-sitter-bin.rs"
-
-[[bin]]
-name = "csra"
-path = "src/ra-client-server.rs"
-
-[[bin]]
-name = "hirra"
-path = "src/ra-hir.rs"
 
 [[bin]]
 name = "syn"
